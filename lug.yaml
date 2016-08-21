@@ -1,0 +1,10 @@
+Title: PGP, GPG, and Enigmail... Oh My!
+Description: >
+    A presentation on how PGP works, how to create a key using GPG, and how to
+    sign others keys. Also includes tips on setting up your email client to use
+    PGP.
+Date: 2016-01-25
+Thumbnail: thumbnail.png
+Files:
+    SlidesPDF: pgp.pdf
+    LaTeX: pgp.tex
