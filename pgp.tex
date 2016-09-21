@@ -95,9 +95,12 @@
 		\item \texttt{gpg --output revoke.asc --gen-revoke \emph{B20E73F7}}
 		\item ``If you forget your passphrase or if your private key is compromised or lost, this revocation certificate may be published to
 			notify others that the public key should no longer be used.''
-		\item ``A revoked public key can still be used to verify signatures made by you in the past, but it cannot be used to encrypt future
-			messages to you. It also does not affect your ability to decrypt messages sent to you in the past if you still do have access
-			to the private key.''
+		\item revoked public keys
+			\begin{enumerate}
+				\item can still verify signatures made by you in the past
+				\item cannot be used to encrypt future messages to you
+				\item do not affect ability to decrypt previously received messages (because that depends on your private key)
+			\end{enumerate}
 	\end{enumerate}
 \end{frame}
 
