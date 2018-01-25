@@ -90,28 +90,28 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Generating a Revocation Certificate}
-	\begin{enumerate}[<+->]
-		\item \texttt{\$ gpg --output revoke.asc --gen-revoke \emph{B20E73F7}}
-		\item ``If you forget your passphrase or if your private key is compromised or lost, this revocation certificate may be published to
-			notify others that the public key should no longer be used.''
-		\item revoked public keys
-			\begin{enumerate}
-				\item can still verify signatures made by you in the past
-				\item cannot be used to encrypt future messages to you
-				\item do not affect ability to decrypt previously received messages (because that depends on your private key)
-			\end{enumerate}
-		\item gpg docs recommend storing a physical (e.g. printed) copy of the revocation certificate in a lock box
-	\end{enumerate}
-	\only<7>{
-		\begin{center}
-			\includegraphics[width=0.4\linewidth]{graphics/gandalf.png}
-		\end{center}
-	}
+    \frametitle{Generating a Revocation Certificate}
+        \begin{enumerate}[<+->]
+            \item \texttt{\$ gpg --output revoke.asc --gen-revoke \emph{B20E73F7}}
+            \item ``If you forget your passphrase or if your private key is compromised or lost, this revocation certificate may be published to
+                notify others that the public key should no longer be used.''
+            \item Revoked public keys:
+                \begin{enumerate}
+                    \item can still verify signatures made by you in the past
+                    \item cannot be used to encrypt future messages to you
+                    \item do not affect ability to decrypt previously received messages (because that depends on your private key)
+                \end{enumerate}
+            \item Store a physical (e.g., printed) copy of the revocation certificate in a lock box
+        \end{enumerate}
+        \visible<7>{
+            \begin{center}
+                \includegraphics[width=0.4\linewidth]{graphics/gandalf.png}
+            \end{center}
+        }
 \end{frame}
 
 \begin{frame}
-    \frametitle{Signing other's keys}
+    \frametitle{Signing others' keys}
     \begin{enumerate}[<+->]
         \item Get their key from a keyserver\par
             \texttt{\small \$ gpg --keyserver pgp.mit.edu --recv \emph{B20E73F7}}
